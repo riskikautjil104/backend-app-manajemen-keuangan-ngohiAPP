@@ -25,6 +25,7 @@ Route::prefix('v1')->group(function (): void {
         Route::put('/user', [UserController::class, 'update']);
 
         Route::get('/app/broadcasts', [AppBroadcastController::class, 'index']);
+        Route::get('/app/broadcasts/latest', [AppBroadcastController::class, 'latest']);
         Route::get('/wallets', [WalletController::class, 'show']);
         Route::put('/wallets', [WalletController::class, 'update']);
 
